@@ -7,6 +7,48 @@
   <title>WEBSITE YUSTINO YOEL</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  background-color: #5e239d;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+  }
+}
+
+nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
     .container {
   max-width: 960px;
   margin: 0 auto;
