@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sejarah Suku Dayak Mualang</title>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #fff8f0, #fefefe);
+      color: #2e1e3b;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-in;
+    }
+
+    body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+    body {
+  padding-top: 60px; /* Sesuaikan tinggi navbar */
+}
+
+    .nav-kembali {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5e0052;
+  padding: 10px 20px;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-kembali a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 14px;
+  background-color: #a832a2;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-kembali a:hover {
+  background-color: #a832a2;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.nav-kembali a:active {
+  transform: scale(0.96);
+  background-color: #7b1e6b;
+}
+
+    /* Gaya Umum */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #fff8f0, #fefefe);
+      color: #6d526d;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      color: #5e0051d8;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #5e0051d8;
+      display: inline-block;
+      padding-bottom: 5px;
+      animation: slideInDown 0.8s ease;
+    }
+
+    p {
+      background-color: #fff3e6;
+      padding: 20px;
+      border-left: 5px solid #8b137b;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #5e0051d8;
+      padding: 10px 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #a832a8;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Responsif */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .ciri-fisik {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 40px;
+  scroll-margin-top: 120px;
+}
+
+.ciri-fisik h3 {
+  color: #5e0051d8;
+}
+
+.ciri-fisik ul {
+  margin-left: 20px;
+  list-style: square;
+}
+
+.tokoh-mualang {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+  scroll-margin-top: 120px;
+  border-left: 4px solid #a832a8;
+  border-radius: 6px;
+}
+
+.tokoh-mualang h3 {
+  color: #5e0051d8;
+  margin-bottom: 15px;
+}
+
+.tokoh-mualang ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  line-height: 1.7;
+}
+
+.tokoh-mualang li {
+  margin-bottom: 10px;
+}
+
+.budaya-mualang {
+  padding: 20px;
+  background-color: #faeefa;
+  margin-top: 40px;
+  scroll-margin-top: 120px;
+  border-left: 4px solid #7d2e76;
+  border-radius: 6px;
+}
+
+.budaya-mualang h3 {
+  color: #5e0051d8;
+  margin-bottom: 10px;
+}
+
+.budaya-mualang h4 {
+  color: #5e0051d8;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.budaya-mualang ul {
+  margin-left: 30px;
+  line-height: 1.7;
+  list-style-type: disc;
+}
+
+.budaya-mualang li {
+  margin-bottom: 8px;
+}
+
+.lagu-daerah {
+  padding: 20px;
+  background-color: #faf3ff;
+  margin-top: 40px;
+  scroll-margin-top: 120px;
+  border-left: 4px solid #5e0051d8;
+  border-radius: 6px;
+}
+
+.lagu-daerah h3 {
+  color: #5e0051d8;
+  margin-bottom: 10px;
+}
+
+.lagu-daerah ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  line-height: 1.7;
+}
+
+.lagu-daerah li {
+  margin-bottom: 6px;
+}
+
+.legenda-mualang {
+  padding: 20px;
+  background-color: #fff8e1;
+  margin-top: 40px;
+  scroll-margin-top: 120px;
+  border-left: 4px solid #5e0051d8;
+  border-radius: 6px;
+}
+
+.legenda-mualang h3 {
+  color: #5e0051d8;
+  margin-bottom: 10px;
+}
+
+.legenda-mualang p {
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+
+  </style>
+</head>
+<script>
+  function toggleCiriFisik() {
+    const konten = document.getElementById("konten-ciri");
+    konten.style.display = konten.style.display === "none" ? "block" : "none";
+    konten.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+<body>
+  <nav class="nav-kembali">
+  <a href="index.html#scroll-target">← Kembali ke Beranda</a>
+</nav>
+
+
+  <h2>Tentang Suku Dayak Mualang</h2>
+  
+  <p>
+    Suku Dayak Mualang merupakan salah satu sub-suku Dayak dari rumpun Ibanic yang tinggal di wilayah Kalimantan Barat. Mereka terkenal dengan warisan budaya yang kuat, sistem pertanian tradisional, dan kehidupan bersama di rumah betang (rumah panjang).
+
+    Domisili utama masyarakat Dayak Mualang berada di Kabupaten Sekadau dan Kabupaten Sintang, Provinsi Kalimantan Barat, tepatnya di beberapa kecamatan berikut:
+  </p>
+
+  <ul>
+    <li>Kecamatan Belitang Hilir, Kabupaten Sekadau</li>
+    <li>Kecamatan Belitang, Kabupaten Sekadau</li>
+    <li>Kecamatan Belitang Hulu, Kabupaten Sekadau</li>
+    <li>Kecamatan Sekadau Hilir, Kabupaten Sekadau</li>
+    <li>Kecamatan Sepauk, Kabupaten Sintang dan sekitarnya</li>
+  </ul>
+
+  <p>
+    Mereka menjunjung tinggi nilai gotong royong, adat istiadat, dan penghormatan kepada leluhur. Sistem kepercayaan dan hukum adat masih aktif dalam kehidupan mereka hingga kini, termasuk dalam menyelesaikan persoalan sosial.
+  </p>
+
+  <section class="ciri-fisik" id="cirifisik">
+  <h3>Ciri Fisik Suku Dayak Mualang</h3>
+  <div id="konten-ciri" style="display: on;">
+    <p>
+      Menurut Prof. Lambut dari Universitas Lambung Mangkurat, secara rasial, manusia Dayak dapat dikelompokkan menjadi:
+    <ul>
+      <li>Dayak Mongoloid</li>
+      <li>Dayak Malayunoid</li>
+      <li>Dayak Autrolo-Melanosoid</li>
+      <li>Dayak Heteronoid</li>
+    </ul>
+    <p>
+      Salah satu ciri yang tampak pada orang Mualang adalah ciri fisik yang mongoloid, wajah bulat, kulit putih/kuning langsat, mata agak sipit, rambut lurus, ada juga yang ikal serta relatif tidak tinggi. Mereka juga dikenal dengan keramah-tamahannya, karena orang Mualang sangat mudah membaur dengan sub suku lain dan mudah bersosial.
+    </p>
+  </div>
+</section>
+
+<section class="tokoh-mualang" id="tokoh">
+  <h3>Tokoh-Tokoh dan Orang-Orang Berpengaruh dari Suku Dayak Mualang</h3>
+  <ul>
+    <li><strong>Mgr. Hieronymus Herculanus Bumbun, O.F.M. Cap.</strong> – Uskup Agung Emeritus Keuskupan Agung Pontianak.</li>
+    <li><strong>Mgr. Dr. Valentinus Saeng, C.P.</strong> – Uskup Sanggau, ditunjuk 18 Juni 2022.</li>
+    <li><strong>Simon Petrus, S.Sos., M.Si.</strong> – Bupati Sekadau (2005–2015).</li>
+    <li><strong>Aloysius, S.H., M.Si.</strong> – Politikus PDIP, Wakil Bupati Sekadau (2016–2021).</li>
+    <li><strong>Subandrio, S.H., M.H.</strong> – Wakil Bupati Sekadau (2021–2024).</li>
+    <li><strong>Paulus Florus</strong> – Budayawan, penulis, pemerhati Credit Union Kalbar.</li>
+    <li><strong>Drs. Milton Crosby, M.Si.</strong> – Bupati Sintang dua periode (2005–2015).</li>
+    <li><strong>Guyau Temenggung Budi</strong> – Pemimpin kuno kelompok terakhir Dayak Mualang yang meninggalkan Tampun Juah, dikawal oleh pendekar legendaris Mualang.</li>
+    <li><strong>Mualang</strong> – Tokoh pahlawan, Manok Sabong (manusia sakti) yang menjadi asal-usul nama Suku Dayak Mualang.</li>
+  </ul>
+</section>
+
+<section class="budaya-mualang" id="budaya">
+  <h3>Tarian dan Warisan Budaya Dayak Mualang</h3>
+
+  <h4>Tarian Dayak Mualang</h4>
+  <ul>
+    <li><strong>Tari Dayak Mualang / Ngajat Kayau</strong> – Tari perang khas Dayak Kalbar.</li>
+    <li><strong>Tari Pingan Mualang</strong> – Tersebar di Belitang Ilek, Tengah, dan Hulu.</li>
+    <li><strong>Tari Pdang / Ngajat Bebunoh</strong> – Ditemui di Belitang Ilek (Merbang dan sekitarnya) serta Belitang Hulu (Sebetung).</li>
+    <li><strong>Ajat Temuai Datai / Nyamot Temuai</strong> – Tari penyambutan tamu adat, tersebar luas di Belitang Ilek, Tengah, Ulu dan sekitarnya.</li>
+    <li><strong>Ngajat Lesong Mualang</strong> – Ditemukan di Belitang Tengah (Sp. 2).</li>
+  </ul>
+
+  <h4>Sanggar Seni</h4>
+  <ul>
+    <li><strong>Sanggar Sengalang Burong</strong> – Berlokasi di Rumah Betang Letjen Sutoyo, Kalbar.</li>
+    <li><strong>Sanggar Sengalang Menenank</strong> – Desa Merbang, Kec. Belitang Hilir, Kab. Sekadau.</li>
+    <li><strong>Sanggar Ayak Menebing</strong> – Kecamatan Sui-Ayak, Kab. Sekadau.</li>
+  </ul>
+
+  <h4>Kelompok Kerajinan</h4>
+  <ul>
+    <li><strong>Tenun Kumpang Ilong</strong> – Kec. Belitang Hulu.</li>
+    <li><strong>Anyaman Tangoy, Ragak, Bubu, Takin</strong> – Tersebar di Menawai.</li>
+  </ul>
+
+  <h4>Situs dan Warisan Budaya</h4>
+  <ul>
+    <li><strong>Rumah Panjai Sungai Antu</strong> – Belitang Hulu (rumah lama yang masih dihuni).</li>
+    <li><strong>Rumah Panjai Temawang Rungkup</strong> – Empajak, Belitang Hilir.</li>
+    <li><strong>Rumah Panjang di Kerintak</strong></li>
+  </ul>
+</section>
+
+<section class="lagu-daerah" id="lagu">
+  <h3>Lagu Daerah Dayak Mualang</h3>
+  <p>Berikut beberapa lagu daerah khas yang populer di kalangan masyarakat Dayak Mualang:</p>
+  <ul>
+    <li><strong>Meh Bujang</strong></li>
+    <li><strong>De Kutak Katik</strong></li>
+    <li><strong>Aboh Beramay</strong></li>
+    <li><strong>Kepai-Kepai</strong></li>
+    <li><strong>Bejuged Ari Gawai</strong></li>
+    <li>...dan masih banyak lagi</li>
+  </ul>
+</section>
+
+<section class="legenda-mualang" id="legenda">
+  <h3>Legenda Asal Usul Suku Dayak Mualang</h3>
+  <p>
+    Sekitar lebih dari 2.000 tahun lalu, kehidupan masyarakat yang kini disebut Mualang sangat erat kaitannya dengan legenda asal usul mereka dari sebuah tempat yang disebut <strong>Temawai</strong> atau <strong>Temawang Tampun Juah</strong>. 
+  </p>
+  <p>
+    Wilayah ini merupakan daerah yang subur yang terletak di hulu Sungai Sekayam, Kabupaten Sanggau Kapuas, tepatnya di hulu kampung <strong>Segomun</strong>, Kecamatan Noyan. Tempat ini dipercaya sebagai tanah leluhur dan menjadi titik awal perjalanan sejarah dan migrasi suku Mualang hingga tersebar di wilayah Kalimantan Barat seperti sekarang.
+  </p>
+</section>
+
+
+
+<script>
+  // Efek masuk saat halaman dibuka
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      document.body.style.opacity = '1';
+    }, 50);
+  });
+
+  // Efek keluar saat klik tombol kembali
+  const tombolKembali = document.querySelector('.nav-kembali a');
+  if (tombolKembali) {
+    tombolKembali.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = this.getAttribute('href');
+
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 400);
+    });
+  }
+</script>
+
+</body>
+</html>

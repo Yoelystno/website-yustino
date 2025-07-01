@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBSITE YUSTINO YOEL</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p, ul {
+    font-size: 1em;
+  }
+
+  nav.nav-kembali a {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p, li {
+    font-size: 0.95em;
+  }
+
+  nav.nav-kembali a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flex-list div {
+  flex: 1 1 45%;
+}
+
+    /* Efek masuk halus */
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Saat halaman selesai dimuat */
+body.loaded {
+  opacity: 1;
+}
+
+    html {
+  scroll-behavior: smooth;
+}
+
+    /* Tombol Interaktif */
+button,
+.cta-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+button:active,
+.cta-button:active {
+  transform: scale(0.96);
+}
+
+/* Link Navigasi */
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Gambar Galeri dan Artikel */
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+}
+
+.qrcode:hover,
+.social-media-icons-bottom img:hover {
+  transform: rotate(3deg) scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+    .hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #5e239d;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    text-align: right;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+}
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      color: #ffffff;
+    }
+
+    header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #5e239d;
+  padding: 0 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3.8em;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+  background: linear-gradient(rgba(94, 35, 157, 0.87), rgba(61, 0, 66, 0.685)),
+              url('background-welcome.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0;
+  animation: fadeInHero 1.2s ease-out;
+  color: #ffffff;
+}
+
+/* Text animation (floating effect) */
+/* Hero Title - Tampil Besar dan Elegan */
+.hero h2 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+/* Deskripsi Hero */
+.hero p {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #dddddd;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Tombol CTA - Tampilan Keren */
+.cta-button {
+  padding: 15px 35px;
+  background: linear-gradient(to right, #a259ff, #5e239d);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(162, 89, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(162, 89, 255, 0.5);
+  background: linear-gradient(to right, #b47aff, #6b30c0);
+}
+
+/* Keyframes for smooth load-in */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for floating motion */
+@keyframes floatHero {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+#tentang {
+  scroll-margin-top: 120px; /* Sesuaikan dengan tinggi navbar */
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-top: 40px;
+}
+
+    /* Tampilan modern dan animasi halus */
+.about {
+  background-color: rgba(162, 89, 255, 0.2); /* Ungu transparan tanpa gelap */
+  border: 2px solid #a259ff;
+  border-radius: 12px;
+  padding: 50px 30px;
+  margin: 200px auto;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.1);
+  backdrop-filter: blur(6px); /* efek kaca buram */
+}
+
+/* Efek muncul saat scroll */
+.about.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about h3 {
+  color: #380081;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #440041;
+  text-align: justify;
+  animation: fadeInText 2s ease forwards;
+}
+
+/* Animasi tambahan */
+@keyframes glowTitle {
+  from {
+    text-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(162, 89, 255, 0.8);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .biodata-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background-color: #f3f1f1;
+      flex-wrap: wrap;
+    }
+
+    .biodata-section img {
+      max-width: 250px;
+      border-radius: 10px;
+      margin-right: 30px;
+      border: 3px solid #a259ff;
+    }
+
+    .biodata-text {
+      max-width: 400px;
+    }
+
+    .biodata-text h3 {
+      color: #a259ff;
+      margin-bottom: 10px;
+    }
+
+    .biodata-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .card-3d {
+  width: 270px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0 auto;
+  animation: flipCard 2s infinite ease-in-out;
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s ease-in-out;
+}
+
+.card-front {
+  background: #fefefe;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background: #a259ff;
+  transform: rotateY(180deg);
+  z-index: 1;
+  color: #fff;
+}
+
+/* Wrapper to rotate both sides */
+.card-3d {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+@keyframes flipCard {
+  0%, 40% {
+    transform: rotateY(0deg);
+  }
+  50%, 90% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+    .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.qrcode {
+  width: 80%;
+  max-width: 180px;
+  height: auto;
+  border: 2px solid #a259ff;
+  border-radius: 8px;
+}
+#artikel {
+  scroll-margin-top: 120px; /* Sesuaikan dengan tinggi navbar */
+  padding: 20px;
+  background-color: #e6f7ff;
+  margin-top: 40px;
+}
+
+    .article {
+  background: rgba(162, 89, 255, 0.1); /* ungu transparan */
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 60px 30px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Efek muncul saat scroll */
+.article.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.article h3 {
+  color: #4800a7;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+.article p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #4800a7;
+  text-align: justify;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease;
+}
+
+.article img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #a259ff;
+  box-shadow: 0 5px 15px rgba(162, 89, 255, 0.2);
+  transition: transform 0.3s;
+}
+
+.article img:hover {
+  transform: scale(1.02);
+}
+
+.article ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.article ul li {
+  margin-bottom: 20px;
+  color: #4800a7;
+}
+
+/* Tambahan animasi */
+@keyframes glowTitle {
+  from {
+    text-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(162, 89, 255, 0.8);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .social-media-icons-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(162, 89, 255, 0.2), rgba(94, 35, 157, 0.2));
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.social-media-icons-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-media-icons-bottom a img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.social-media-icons-bottom a img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.6);
+  border-color: #a259ff;
+}
+
+    footer {
+      background-color: #5e239d;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 992px) {
+  .hero h2 {
+    font-size: 2.5em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .biodata-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .biodata-section img {
+    margin: 0 0 20px;
+  }
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .creator-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-photo img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 0.9em;
+  }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  nav a {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+  .article img {
+    max-width: 100%;
+  }
+}
+
+#sejarah {
+  scroll-margin-top: 120px;
+  padding: 20px;
+  background-color: #f1efea;
+  margin-top: 40px;
+}
+
+.sejarah-singkat h3 {
+  color: #5e239d;
+  font-size: 24px;
+}
+
+.tombol-sejarah {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4b138b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tombol-sejarah:hover {
+  background-color: #5f2da0;
+  transform: scale(1.05);
+}
+
+.tombol-sejarah:active {
+  background-color: #280d5a;
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.highlight {
+  background-color: #fcfbf9;
+  padding: 15px;
+  border-radius: 6px;
+  color: #2b1e3b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#scroll-target {
+  scroll-margin-top: 120px;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>WEBSITE YUSTINO YOEL</h2>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#biodata">Biodata</a>
+      <a href="#artikel">Artikel</a>
+      <a href="tentang.html">Profil</a>
+      <a href="#medsos">Medsos</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+  <h2>WELCOME TO WEBSITE YUSTINO YOEL</h2>
+  <p id="typewriter"></p>
+  <button onclick="window.location.href='tentang.html'" style="
+    padding: 10px 10px;
+    background-color: #a259ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+  " 
+  onmousedown="this.style.transform='scale(0.95)'; this.style.boxShadow='inset 0 0 8px rgba(0,0,0,0.3)'" 
+  onmouseup="this.style.transform='scale(1)'; this.style.boxShadow='none'">Profil Yustino Yoel</button>
+</section>
+  
+  <section class="about" id="tentang">
+    <h3>Tentang Website</h3>
+    <p>
+      Webesite ini dibuat oleh Yustino Yoel untuk memenuhi syarat Ujian Akhir Semester pada mata kuliah Interaksi Manusia dan Komputer, Website ini juga menyediakan artikel yang menarik untuk di baca tentang Suku Dayak Mualang, anda juga bisa membuka tentang pembuat website ini dimana terdapat foto, musik, dan lain-lain.
+    </p>
+  </section>
+
+  <section class="biodata-section" id="biodata">
+  <div class="card-3d">
+    <div class="card-face card-front">
+      <div class="card-header">
+        <h3>YUSTINO YOEL</h3>
+        <p>REKAYASA KOMPUTER</p>
+      </div>
+
+      <!-- Lanyard di sini -->
+      <div class="lanyard-holder"></div>
+
+      <!-- Foto berada tepat di bawah tali lanyard -->
+      <img src="yoel.jpg" class="card-photo" alt="Foto Yustino Yoel">
+
+      <div class="card-body">
+        <p><strong>NIM:</strong> 2356202033</p>
+      </div>
+    </div>
+
+    <div class="card-face card-back">
+    <p>KARTU IDENTITAS</p>
+    <img src="qrcode.png" alt="QR Code" class="qr-code">
+    </section> <!-- Penutup untuk biodata-section -->
+  </div>
+</div>
+
+
+  <section class="article" id="artikel">
+    <h3>Mengenal Lebih Dekat Suku Dayak Mualang</h3>
+    <img src="pakaian-adat-dayak.jpeg" alt="Alat musik tradisional Dayak Mualang">
+    <p>Dayak Mualang merupakan salah satu sub-suku Dayak yang berasal dari Kalimantan Barat, Indonesia. Mereka termasuk dalam rumpun Dayak Ibanic yang memiliki keterkaitan erat dengan suku Iban. Sebagian besar masyarakat Dayak Mualang menetap di Kabupaten Sekadau dan wilayah sekitarnya.</p>
+
+    <p>Masyarakat Dayak Mualang menggunakan bahasa Mualang, yang masih satu rumpun dengan bahasa Iban. Bahasa ini menjadi alat komunikasi utama dalam kehidupan sehari-hari. Mereka juga mahir berbahasa Indonesia untuk berinteraksi dengan masyarakat luar.</p>
+
+    <img src="rumah-betang.jpeg" alt="Rumah Panjang Dayak Mualang">
+    <p>Rumah adat mereka disebut rumah panjang atau Betang. Rumah ini menjadi simbol kebersamaan dan pusat kegiatan adat. Selain itu, masyarakat Dayak Mualang juga mahir dalam seni ukir, tenun, dan memainkan musik tradisional seperti sape’.</p>
+
+    <img src="alat-musik-tradisional.jpeg" alt="Kegiatan budaya Dayak Mualang">
+    <p>Tarian khas mereka antara lain:</p>
+    <ul>
+      <li><strong>Ngajat Kayau:</strong> Tarian perang khas Dayak.</li>
+      <li><strong>Tari Pingan:</strong> Tarian piring khas wilayah Belitang.</li>
+      <li><strong>Tari Pedang Mualang:</strong> Tarian pria dari daerah Merbang dan Sebetung.</li>
+      <li><strong>Ajat Temuai Datai:</strong> Tarian penyambutan tamu.</li>
+    </ul>
+
+    <img src="alat-musik-dayak.jpeg" alt="Pakaian adat Dayak Mualang">
+    <p>Kepercayaan asli mereka adalah Kaharingan, namun kini sebagian besar juga memeluk agama Kristen dan Islam. Meski begitu, tradisi tetap dijaga seperti:</p>
+    <ul>
+      <li><strong>Gawai:</strong> Pesta panen penuh syukur dan kebersamaan.</li>
+      <li><strong>Nyobeng:</strong> Ritual penyucian tengkorak.</li>
+      <li><strong>Ritual Penyembuhan:</strong> Minta kesembuhan dari roh jahat.</li>
+      <li><strong>Berangap:</strong> Minum tuak sebagai syarat peminangan.</li>
+    </ul>
+
+    <p>Dayak Mualang adalah penjaga warisan budaya Kalimantan Barat. Meski zaman berubah, identitas mereka tetap hidup dalam semangat dan adat yang lestari.</p>
+  </section>
+
+  <section class="sejarah-singkat" id="sejarah">
+  <h3>Sejarah Suku Dayak Mualang</h3>
+  <p class="highlight">
+  Suku Dayak Mualang merupakan salah satu sub-suku Dayak dari rumpun Ibanic yang tinggal di wilayah Kalimantan Barat. Mereka terkenal dengan warisan budaya yang kuat, sistem pertanian tradisional, dan kehidupan bersama di rumah betang (rumah panjang)...
+</p>
+
+  <a href="sejarah.html" class="tombol-sejarah" id="scroll-target">Baca Selengkapnya</a>
+</section>
+
+
+ <div class="social-media-icons-bottom" id="medsos">
+  <a href="https://www.instagram.com/ystno_yoel/profilecard/?igsh=MTBuejRpeDc3YXoxeA==" target="_blank">
+    <img src="instagram.png" alt="Instagram">
+  </a>
+  <a href="https://www.facebook.com/share/16UeXhtLSP/" target="_blank">
+    <img src="facebook.png" alt="Facebook">
+  </a>
+</div>
+
+<footer>
+  &copy; 2025 Yustino Yoel. Hak cipta dilindungi.
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.about, .biodata-section, .article, .social-media-icons-bottom').forEach(el => {
+    el.classList.add('scroll-fade');
+    observer.observe(el);
+  });
+</script>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+  }
+</script>
+<script>
+  const messages = [
+    "SELAMAT MENJELAJAHI WEBSITE MILIK YUSTINO YOEL",
+    "TEMUKAN INFORMASI TENTANG YUSTINO YOEL",
+    "TERIMA KASIH TELAH BERKUNJUNG",
+    "NIKMATI KONTEN DI WEBSITE INI"
+  ];
+
+  let currentMessage = 0;
+  let currentChar = 0;
+  let isDeleting = false;
+  const speed = 100; // kecepatan mengetik
+  const delayBetween = 2000; // jeda antar pesan
+
+  const typewriterElement = document.getElementById("typewriter");
+
+  function type() {
+    const fullText = messages[currentMessage];
+    if (isDeleting) {
+      typewriterElement.textContent = fullText.substring(0, currentChar--);
+      if (currentChar < 0) {
+        isDeleting = false;
+        currentMessage = (currentMessage + 1) % messages.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, speed / 2);
+      }
+    } else {
+      typewriterElement.textContent = fullText.substring(0, currentChar++);
+      if (currentChar > fullText.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetween);
+      } else {
+        setTimeout(type, speed);
+      }
+    }
+  }
+
+  type();
+</script>
+<script>
+  const links = document.querySelectorAll('a[href$=".html"]');
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      document.body.classList.remove("loaded");
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400); // waktu fade-out sebelum pindah
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+</body>
+</html>

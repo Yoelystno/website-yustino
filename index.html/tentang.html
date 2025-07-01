@@ -1,0 +1,732 @@
+<!-- tentang.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Yustino Yoel</title>
+  <style>
+    body.light-mode {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode .creator-details p,
+body.light-mode .lyrics-full,
+body.light-mode .bible-verse,
+body.light-mode .lyrics-box,
+body.light-mode .music-details h3 {
+  color: #111111 !important;
+}
+
+body.light-mode .about-text,
+body.light-mode .creator-details {
+  color: #222222;
+}
+
+body.light-mode .gallery img,
+body.light-mode .music-cover,
+body.light-mode .creator-photo {
+  border-color: #a259ff;
+}
+
+body.light-mode .lyrics-box,
+body.light-mode .bible-verse-section,
+body.light-mode .creator-info,
+body.light-mode .music-frame {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+body.light-mode .bible-verse-section h2,
+body.light-mode .about-text h2,
+body.light-mode .creator-info h2,
+body.light-mode .lyrics-full h4 {
+  color: #a259ff;
+}
+
+    /* Tombol Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #a259ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Mode terang */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+body.light-mode a {
+  color: #333333;
+}
+
+body.light-mode .about-enhanced,
+body.light-mode .creator-info,
+body.light-mode .music-frame,
+body.light-mode .lyrics-box,
+body.light-mode .bible-verse-section {
+  background-color: #ffffff;
+  border-color: #a259ff;
+  color: #000000;
+}
+
+body.light-mode .music-cover,
+body.light-mode .creator-photo {
+  border-color: #a259ff;
+}
+
+    /* Efek umum */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek variasi lainnya */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease;
+}
+.scroll-animate-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease;
+}
+.scroll-animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+.scroll-animate-zoom.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #3a0027;
+      color: #ffffff;
+      padding: 40px;
+    }
+    h1 {
+      color: #a259ff;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .about-enhanced {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('bg-about.jpg') center/cover fixed no-repeat;
+  padding: 80px 20px;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  color: #ffffff;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  color: #a259ff;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.about-photo {
+  flex: 1 1 300px;
+  text-align: center;
+  animation: fadeInRight 1s ease-out;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  border: 4px solid #a259ff;
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.4);
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+    .creator-info {
+  background-color: #141414;
+  padding: 40px 20px;
+  margin-top: 30px;
+  border: 2px solid #a259ff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+}
+
+.creator-info h2 {
+  text-align: center;
+  color: #a259ff;
+  margin-bottom: 20px;
+}
+
+.creator-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.creator-photo {
+  width: 150px;
+  border-radius: 10px;
+  border: 3px solid #a259ff;
+}
+
+.creator-details p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #a259ff;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  #lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    border: 4px solid #a259ff;
+  }
+
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    transform: translateY(-50%);
+  }
+
+  #prev {
+    left: 20px;
+  }
+
+  #next {
+    right: 20px;
+  }
+  .music-player {
+  display: flex;
+  align-items: center;
+  background-color: #580058;
+  border: 2px solid #a259ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  gap: 20px;
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+}
+
+.music-cover {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #a259ff;
+}
+
+.music-info h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.music-info audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.lyrics-box {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #420032;
+  padding: 20px;
+  border: 2px solid #a259ff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+  min-height: 80px;
+}
+
+#lyrics-display {
+  transition: opacity 0.5s ease;
+}
+
+.music-frame {
+  background-color: #1a1a1a;
+  border: 2px solid #a259ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.2);
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.music-cover {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 2px solid #a259ff;
+  object-fit: cover;
+}
+
+.music-details h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.music-details audio {
+  width: 100%;
+}
+
+.lyrics-full {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.lyrics-full h4 {
+  margin-bottom: 10px;
+  color: #a259ff;
+}
+
+.lyrics-full p {
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.bible-verse-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('bible-bg.jpg') center/cover no-repeat;
+  padding: 30px 20px;
+  border: 2px solid #a259ff;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.3);
+}
+
+.bible-verse-section h2 {
+  color: #a259ff;
+  margin-bottom: 15px;
+}
+
+.bible-verse {
+  font-size: 1.2em;
+  color: #ffffff;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-photo {
+    flex: 1 1 100%;
+  }
+
+  .creator-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .music-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .music-cover {
+    width: 100px;
+    height: 100px;
+  }
+
+  .lyrics-box, .music-frame, .creator-info, .bible-verse-section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .about-text h2 {
+    font-size: 2em;
+  }
+
+  .music-details h3 {
+    font-size: 1.1em;
+  }
+}
+
+  </style>
+
+  <script>
+  const images = [
+    'foto1.jpg',
+    'foto2.jpg',
+    'foto3.jpg',
+    'foto4.jpg',
+    'foto5.jpg'
+  ];
+  
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById('lightbox-img').src = images[currentIndex];
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('lightbox-img').src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('lightbox-img').src = images[currentIndex];
+  }
+
+  const lyrics = [
+    "Jiwa bebas terlepas",
+    "Kuasa maut telah terhempas",
+    "Nama Yesus pemenang",
+    "Nama Yesus jawaban",
+
+    "Langkah takkan berhenti",
+    "Berlari sampai akhir",
+    "Serukan tinggi nama-Nya",
+    "Serukan ajaib nama-Nya",
+
+    "Roh Kudus membakar setiap kami",
+    "Naikkan pujian mujizat terjadi",
+
+    "Mengalir kuasa-Mu",
+    "Nyalakan api-Mu",
+    "Ku nyanyi ooeoo-oo-oo-eoo-oo ooeoo-oo-oo",
+
+    "Tercurah kuasa-Mu",
+    "Nyalakan api-Mu",
+    "Ku nyanyi ooeoo-oo-oo-eoo-oo",
+    "Keajaiban terjadi",
+  ];
+
+  let currentLine = 0;
+  let lyricsInterval;
+
+  function startLyrics() {
+    currentLine = 0;
+    document.getElementById("lyrics-display").textContent = lyrics[currentLine];
+    lyricsInterval = setInterval(() => {
+      currentLine++;
+      if (currentLine < lyrics.length) {
+        const display = document.getElementById("lyrics-display");
+        display.style.opacity = 0;
+        setTimeout(() => {
+          display.textContent = lyrics[currentLine];
+          display.style.opacity = 1;
+        }, 400);
+      } else {
+        clearInterval(lyricsInterval);
+      }
+    }, 4000); // Ganti lirik setiap 4 detik
+  }
+
+  function pauseLyrics() {
+    clearInterval(lyricsInterval);
+  }
+</script>
+
+</head>
+<body>
+  <div style="text-align: right; margin-bottom: 20px;">
+  <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<section class="about-enhanced">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>Tentang Yustino Yoel</h2>
+      <p>
+        Seorang mahasiswa Institut Teknologi Keling Kumang dari program studi Rekayasa Komputer dengan NIM: 2356202033 Berasal dari Belitang Hulu, Dusun Pateh. Anak Pertama dari 3 bersaudara. Tujuan website ini dirancang sebagai wadah ekspresi diri, budaya, dan edukasi berbasis teknologi. Dengan nuansa warna ungu yang elegan, hadir untuk menginspirasi, berbagi pengetahuan, dan memperkenalkan kekayaan budaya lokal Suku Dayak Mualang kepada dunia digital.
+      </p>
+     <button onclick="window.location.href='index.html'" style="
+  padding: 10px 20px;
+  background-color: #a259ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+" onmousedown="this.style.transform='scale(0.95)'; this.style.boxShadow='inset 0 0 8px rgba(0,0,0,0.3)'" 
+onmouseup="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+  Kembali ke Beranda
+</button>
+    </div>
+    <div class="about-photo">
+      <img src="yoel.jpg" alt="Foto Yustino Yoel">
+    </div>
+  </div>
+</section>
+
+<section class="creator-info scroll-animate">
+  <h2>Data Yustino Yoel</h2>
+  <div class="creator-card">
+    <img src="yoel.jpg" alt="Foto Pembuat" class="creator-photo">
+    <div class="creator-details">
+      <p><strong>Nama:</strong> Yustino Yoel</p>
+      <p><strong>Tempat Tanggal Lahir:</strong> Dusun Pateh, 29 Juli 2005</p>
+      <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+      <p><strong>Agama:</strong> Kristen Prostestan</p>
+      <p><strong>Alamat:</strong> Sekadau dan Pateh</p>
+      <p><strong>Hobby:</strong> Bermain Sepak Bola</p>
+      <p><strong>Cita-cita:</strong> Konglomerat</p>
+      <p><strong>Status:</strong> Mahasiswa</p>
+      <p><strong>Jabatan:</strong> Wakil Ketua BEM ITKK</p>
+      <p><strong>SD:</strong> SDN 1 Kumpang Ilong</p>
+      <p><strong>SMP:</strong> SMPN 5 Belitang Hulu</p>
+      <p><strong>SMA:</strong> SMAN 1 Belitang Hulu</p>
+      <p><strong>Perguruan Tinggi:</strong> Institut Teknologi Keling Kumang</p>
+      <p><strong>Instagram:</strong> @ystno_yoel</p>
+    </div>
+  </div>
+</section>
+
+<h2>Galeri Foto</h2>
+<div class="gallery scroll-animate-left">
+  <img src="foto1.jpg" alt="Foto 1" onclick="openLightbox(0)">
+  <img src="foto2.jpg" alt="Foto 2" onclick="openLightbox(1)">
+  <img src="foto3.jpg" alt="Foto 3" onclick="openLightbox(2)">
+  <img src="foto4.jpg" alt="Foto 4" onclick="openLightbox(3)">
+  <img src="foto5.jpg" alt="Foto 5" onclick="openLightbox(4)">
+</div>
+
+<!-- Lightbox Popup -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="nav-button" id="prev" onclick="event.stopPropagation(); prevImage()">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Preview Besar">
+  <span class="nav-button" id="next" onclick="event.stopPropagation(); nextImage()">&#10095;</span>
+</div>
+
+<h2>Musik Favorit</h2>
+<div class="music-frame scroll-animate-right">
+  <div class="music-header">
+    <img src="cover-musik.jpg" alt="Cover Lagu" class="music-cover">
+    <div class="music-details">
+      <h3>GMS Live - Nyalakan ApiMu - I Diclare Album</h3>
+      <audio controls>
+        <source src="musik-latar.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
+    </div>
+  </div>
+  <div class="lyrics-full">
+    <h4>Lirik Lagu</h4>
+    <p>
+      Jiwa bebas terlepas<br>
+      Kuasa maut telah terhempas<br>
+      Nama Yesus pemenang<br>
+      Nama Yesus jawaban<br>
+      Berlari sampai akhir<br>
+      Serukan tinggi nama-Nya<br>
+      Serukan ajaib nama-Nya<br>
+      Roh Kudus membakar setiap kami<br>
+      Naikkan pujian mujizat terjadi<br>
+      Mengalir kuasa-Mu<br>
+      Nyalakan api-Mu<br>
+      Ku nyanyi ooeoo-oo-oo-eoo-oo ooeoo-oo-oo<br>
+      Tercurah kuasa-Mu<br>
+      Nyalakan api-Mu<br>
+      Ku nyanyi ooeoo-oo-oo-eoo-oo<br>
+      Keajaiban terjadi
+    </p>
+  </div>
+</div>
+
+<section class="bible-verse-section scroll-animate-zoom">
+  <h2>Ayat Alkitab Favorit</h2>
+  <blockquote class="bible-verse">
+    “Mengucap syukurlah dalam segala hal, sebab itulah yang dikehendaki Allah di dalam Kristus Yesus bagi kamu.”<br>
+    <strong>— 1 Tesalonika 5:18</strong>
+  </blockquote>
+</section>
+
+<script>
+  const animateObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-zoom')
+    .forEach(el => animateObserver.observe(el));
+</script>
+<script>
+  const modeToggle = document.getElementById('modeToggle');
+  const currentMode = localStorage.getItem('mode');
+
+  if (currentMode === 'light') {
+    document.body.classList.add('light-mode');
+    modeToggle.checked = true;
+  }
+
+  modeToggle.addEventListener('change', function () {
+    if (this.checked) {
+      document.body.classList.add('light-mode');
+      localStorage.setItem('mode', 'light');
+    } else {
+      document.body.classList.remove('light-mode');
+      localStorage.setItem('mode', 'dark');
+    }
+  });
+</script>
+
+</body>
+</html>
